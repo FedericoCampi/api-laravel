@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "f315c154-e70b-4674-846e-0c9a7023e3f0",
+		"name": "api-laravel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "18012363",
+		"_collection_link": "https://dark-zodiac-29357.postman.co/workspace/Nodejs~2aeb9547-1ce4-4945-a42d-2d40db9c4dd8/collection/18012363-f315c154-e70b-4674-846e-0c9a7023e3f0?action=share&source=collection_link&creator=18012363"
+	},
+	"item": [
+		{
+			"name": "registro",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"test_user3\",\r\n    \"email\": \"test3@test.com\",\r\n    \"password\": \"123456\",\r\n    \"password_confirmation\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{local_host}}/register"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test@test.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{local_host}}/login"
+			},
+			"response": []
+		},
+		{
+			"name": "get users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzQ1MDkzMzAwLCJleHAiOjE3NDUwOTY5MDAsIm5iZiI6MTc0NTA5MzMwMCwianRpIjoiY1NneVMybEo2aEVLRkFmTiIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.7n6l6fOpBZPmQ_YaW8FWV_Mz_ljLwcvNRiHGrZPvyyg"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "{{local_host}}/users"
+			},
+			"response": []
+		},
+		{
+			"name": "get user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzQ1MDkzMzAwLCJleHAiOjE3NDUwOTY5MDAsIm5iZiI6MTc0NTA5MzMwMCwianRpIjoiY1NneVMybEo2aEVLRkFmTiIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.7n6l6fOpBZPmQ_YaW8FWV_Mz_ljLwcvNRiHGrZPvyyg"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "{{local_host}}/users/1"
+			},
+			"response": []
+		},
+		{
+			"name": "update user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"test_user_upt\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{local_host}}/users/1"
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{local_host}}/users/3"
+			},
+			"response": []
+		},
+		{
+			"name": "create post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"post2\",\r\n    \"content\": \"post2 content\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{local_host}}/posts"
+			},
+			"response": []
+		},
+		{
+			"name": "get posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{local_host}}/posts"
+			},
+			"response": []
+		},
+		{
+			"name": "get post",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{local_host}}/posts/2"
+			},
+			"response": []
+		},
+		{
+			"name": "update post",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"post1 updated\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{local_host}}/posts/1"
+			},
+			"response": []
+		},
+		{
+			"name": "delete post",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{local_host}}/posts/1"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzQ1MDkzMzAwLCJleHAiOjE3NDUwOTY5MDAsIm5iZiI6MTc0NTA5MzMwMCwianRpIjoiY1NneVMybEo2aEVLRkFmTiIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.7n6l6fOpBZPmQ_YaW8FWV_Mz_ljLwcvNRiHGrZPvyyg"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "local_host",
+			"value": "http://127.0.0.1:8000/api",
+			"type": "string"
+		}
+	]
+}
